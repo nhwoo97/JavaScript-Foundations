@@ -132,18 +132,32 @@ function variableInterestRate(p,i,n){
 }
 
 
-
-
-
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
 
 /* Attempt any of the stretch goals below once you have finished the work above. Remember as always, these may require additional research beyond what you learned today */
 
 /*  🏡 Add  `Property Tax`, `Homeowner's insurance` and `HOA fees` as parameters in your function to calculate total monthly spending on housing */
-
+function stretchOne(p, i, n, pTax, homeInsurance, HOA){
+    let mi= i/12;
+    let time= n*12;
+    let calculatedResult = p * ((mi * Math.pow((1  + mi), time)) / (Math.pow((1  + mi), time) - 1));
+    calculatedResult= calculatedResult + pTax + homeInsurance + HOA;
+    calculatedResult = Math.round(calculatedResult * 100)/ 100;
+    console.log('Your calculated result is ', calculatedResult);
+}
 
 /* 🏡 Build a calculator function that accepts `monthly payment` and `interest rate` and returns the maximum loan that a person could afford */
+function stretchTwo(loan, mp, iRate){
+    let payment= loan*iRate;
+    if (payment<mp){
+        let realLoan= mp/iRate;
+        console.log("You can borrow up to ", realLoan, "!")           
+    }else{
+        console.log("Well you ain't got the money!")
+    }
+}
 
+stretchTwo(1000, 500, 0.1);
 
 /* 🏡 Explore using `window.prompt()` to allow a user to input parameters in the browser */
 
