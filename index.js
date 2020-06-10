@@ -157,8 +157,6 @@ function stretchTwo(loan, mp, iRate){
     }
 }
 
-stretchTwo(1000, 500, 0.1);
-
 /* 🏡 Explore using `window.prompt()` to allow a user to input parameters in the browser */
 
 
