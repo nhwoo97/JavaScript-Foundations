@@ -130,7 +130,7 @@ function variableInterestRate(p,i,n){
         console.log('Your calculated result is ', calculatedResult);
     }   
 }
-variableInterestRate(200000, 0.04, 30);
+
 
 
 
